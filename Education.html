@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume earth</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      
+      .active {
+          background-color: #4CAF50;
+          color: white;
+      }
+  </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a class="active" href="Education.html">Education</a>
+        <a href="Skill.html">Skill</a>
+        <a href="APIMethod.html">API Method</a>
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Lower Secondary Level')" id="defaultOpen">Lower Secondary Level</button>
+        <button class="tablinks" onclick="openCity(event, 'Vocational Education')">Vocational Education</button>
+        <button class="tablinks" onclick="openCity(event, 'University')">University</button>
+      </div>
+      
+      <div id="Lower Secondary Level" class="tabcontent">
+        <h3>Lasalle Chotiravi Nakhonsawan</h3>
+        <img src="images/maxresdefault.jpg" width="400px" alt="">
+        <p>Primary School - Secondary School</p>
+        <p> Grade 1 - 12 </p>
+        <p>Since 2009 - 2017</p>
+      </div>
+      
+      <div id="Vocational Education" class="tabcontent">
+        <h3>Thaluang Cementhainusorn Technical College</h3>
+        <img src="images/images.png" width="400px" alt="">
+        <p>Technical College</p>
+        <p>Since 2017 - 2020</p>
+      </div>
+      
+      <div id="University" class="tabcontent">
+        <h3>King Mongkut's University of Technology North Bangkok</h3>
+        <img src="images/logo-kmutnb.jpg" width="400px" alt="">
+        <p>Bachelor Degrees</p>
+        <p>Since 2020 - Present</p>
+      </div>
+      
+      <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      document.getElementById("defaultOpen").click();
+      </script>
+      
+</body>
+</html>
